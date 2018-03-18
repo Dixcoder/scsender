@@ -14,5 +14,5 @@ delay = 30
 
 STEP 2.
 
-Type "pip install requirements.txt"
-Type "python SCSender.py" in terminal.
+Type "pip install requirements.txt";
+"python SCSender.py" in terminal.
