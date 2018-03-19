@@ -12,7 +12,12 @@ smtpport = 587
 delay = 30                          
 
 
+
 STEP 2.
 
-Type "pip install requirements.txt";
-"python SCSender.py" in terminal.
+Type "pip3 install -r requirements.txt";
+Type "python SCSender.py" in terminal.
+
+
+STEP 3.
+Check your email.
