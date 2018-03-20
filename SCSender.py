@@ -15,9 +15,9 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 
 #Define data
-send_to = 'forpysendemail@gmail.com'       #email to send
-user_email = 'forpysendemail@gmail.com' #your email
-user_password = '2324zzp001'          #your password
+send_to = 'SEND_TO@EMAIL.COM'       #email to send
+user_email = 'USER_EMAIL@EMAIL.COM' #your email
+user_password = 'USER_PASSWORD'          #your password
 smtpserver = 'smtp.gmail.com'       #smtp server, gmail is recomended
 smtpport = 587                      #smtp server's port
 delay = 30                          #delay between sending emails in seconds
