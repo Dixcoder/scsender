@@ -1,6 +1,6 @@
 #------------------------------
 #
-#Program by Kirill Z. Aka Dixcoder;
+#Program Krearden;
 #
 #Version    Date         Info
 #1.0        18.03.2018   Make screenshot&send it to your email.
